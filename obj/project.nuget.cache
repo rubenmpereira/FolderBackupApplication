@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7TXvpShd+DI=",
+  "dgSpecHash": "mbpmWZgHwz8=",
   "success": true,
   "projectFilePath": "C:\\Projects\\FolderBackupApplication\\FolderBackupApplication\\FolderBackupApplication.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ruben\\.nuget\\packages\\system.configuration.configurationmanager\\8.0.0\\system.configuration.configurationmanager.8.0.0.nupkg.sha512",
+    "C:\\Users\\ruben\\.nuget\\packages\\system.diagnostics.eventlog\\8.0.0\\system.diagnostics.eventlog.8.0.0.nupkg.sha512",
+    "C:\\Users\\ruben\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
