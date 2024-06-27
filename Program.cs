@@ -1,6 +1,8 @@
 ﻿using FolderBackupApplication;
 using Serilog;
 
+BackupService service = new();
+
 string folderlocation = UserSettings.Default.FolderLocation;
 string backuplocation = UserSettings.Default.BackupLocation;
 string logfilelocation = UserSettings.Default.LogFile;
@@ -187,7 +189,9 @@ do
             }
 
             Console.WriteLine("Running backup sync manually \n");
-            //Run backup
+
+            await service.Backup(folderlocation, backuplocation, logfilelocation);
+
             break;
         case "exit":
             exit = true;

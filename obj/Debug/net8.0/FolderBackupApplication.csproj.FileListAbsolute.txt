@@ -21,3 +21,5 @@ C:\Projects\FolderBackupApplication\FolderBackupApplication\obj\Debug\net8.0\ref
 C:\Projects\FolderBackupApplication\FolderBackupApplication\obj\Debug\net8.0\FolderBackupApplication.pdb
 C:\Projects\FolderBackupApplication\FolderBackupApplication\obj\Debug\net8.0\FolderBackupApplication.genruntimeconfig.cache
 C:\Projects\FolderBackupApplication\FolderBackupApplication\obj\Debug\net8.0\ref\FolderBackupApplication.dll
+C:\Projects\FolderBackupApplication\FolderBackupApplication\bin\Debug\net8.0\Serilog.dll
+C:\Projects\FolderBackupApplication\FolderBackupApplication\bin\Debug\net8.0\Serilog.Sinks.File.dll
