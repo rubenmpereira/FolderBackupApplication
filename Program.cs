@@ -1,12 +1,42 @@
 ﻿using FolderBackupApplication;
+using Coravel;
+using Microsoft.Extensions.Hosting;
 using Serilog;
 
-BackupService service = new();
+HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
+
+builder.Services.AddScheduler();
+
+var app = builder.Build();
 
 string folderlocation = UserSettings.Default.FolderLocation;
 string backuplocation = UserSettings.Default.BackupLocation;
 string logfilelocation = UserSettings.Default.LogFile;
 int syncInterval = UserSettings.Default.Interval;
+int hoursPassed = 0;
+
+BackupService service = new();
+
+app.Services.UseScheduler(x =>
+{
+    x.ScheduleAsync(async () =>
+    {
+        hoursPassed++;
+        if (hoursPassed % syncInterval == 0)
+        {
+            if (!string.IsNullOrEmpty(folderlocation) && !string.IsNullOrEmpty(backuplocation))
+                await service.Backup(folderlocation, backuplocation, logfilelocation);
+            else
+            {
+                Console.WriteLine("Backup sync failed");
+                Console.WriteLine("Folder location or backup location is undefined \n");
+            }
+        }
+    })
+    .Hourly();
+});
+
+app.Start();
 
 Console.WriteLine("\nBackup software started \n");
 
@@ -130,6 +160,7 @@ do
 
                     if (int.TryParse(value, out int result) && result > 0)
                     {
+                        hoursPassed = 0;
                         syncInterval = result;
                         UserSettings.Default.Interval = syncInterval;
                         UserSettings.Default.Save();

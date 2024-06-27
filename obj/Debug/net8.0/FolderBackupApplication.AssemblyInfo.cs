@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FolderBackupApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77bdea939909f2c56190bab32018a9c4e72d234b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48fc1c533db2e316e64a0ba702514b504edc3c2c")]
 [assembly: System.Reflection.AssemblyProductAttribute("FolderBackupApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FolderBackupApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
